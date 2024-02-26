@@ -1,0 +1,44 @@
+@import "../../styles/App.scss";
+
+.tv {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+
+    h1 {
+        color: white;
+        text-align: center;
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+        text-transform: uppercase;
+    }
+
+    .tv-discover {
+        padding: 1rem 0.5rem;
+
+        .discover {
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+        }
+    }
+
+    .tv-topRated {
+        padding: 1rem 0.5rem;
+
+        .topRated {
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+        }
+    }
+
+    .tv-popular {
+        padding: 1rem 0.5rem;
+
+        .popular {
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+        }
+    }
+}

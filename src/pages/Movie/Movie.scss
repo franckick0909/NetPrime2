@@ -1,0 +1,60 @@
+@import "../../styles/App.scss";
+
+.movie {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+
+    h1 {
+        color: white;
+        text-align: center;
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+        text-transform: uppercase;
+    }
+
+    .movie-discover {
+        padding: 1rem 0.5rem;
+
+        .discover {
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+        }
+    }
+
+    .movie-topRated {
+        padding: 1rem 0.5rem;
+
+        .topRated {
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+        }
+    }
+
+    .movie-popular {
+        padding: 1rem 0.5rem;
+
+        .popular {
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.trait {
+    color: $color-6;
+    font-family: $font-3;
+    letter-spacing: 1px;
+    font-weight: lighter;
+    text-shadow: 0 1px 1px black;
+
+    &::after {
+        content: "";
+        display: block;
+        width: 70%;
+        height: 2px;
+        background: linear-gradient(to right, $color-6, $color-1);
+    }
+}

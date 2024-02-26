@@ -1,0 +1,159 @@
+@import "../../styles/App.scss";
+
+.mySwiper {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    max-height: 100dvh;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding: 0 1rem;
+
+    .swiperSlide {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+
+        .posterImage {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            min-height: 100dvh;
+            position: relative;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            &__overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                // background: rgba(0, 0, 0, 0.5);
+
+                .container {
+                    // background: rgba(255, 255, 255, 0.2);
+                    // backdrop-filter: blur(2px);
+                    // -webkit-backdrop-filter: blur(10px);
+                    padding: 1rem;
+                    border-radius: 10px;
+                    margin: auto;
+                    position: absolute;
+                    bottom: -10%;
+                    left: 22%;
+                    transform: translate(-50%, -50%);
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+                    max-width: 700px;
+                    width: 100%;
+                    height: auto;
+                    gap: 20px;
+                    color: $color-2;
+                    @media (max-width: 1050px) {
+                            left: 40%;
+                        }
+
+                    @media (max-width: 768px) {
+                        left: 50%;
+                        bottom: 0%;
+                        max-width: 320px;
+                    }
+
+                    &__title {
+                        color: $color-2;
+                        font-size: clamp(1.5rem, 2.5vw, 3rem);
+                        font-weight: 500;
+                        text-align: left;
+                        text-shadow:  0 1px 1px black;
+                    }
+
+                    &__runtime {
+                        font-size: clamp(1rem, 2.5vw, 1.5rem);
+                        font-weight: 500;
+                        display: flex;
+                        gap: 10px;
+                        color: $color-3;
+                        text-shadow: 0 1px 1px black;
+                        
+                    }
+
+                    &__rating {
+                        font-size: clamp(1rem, 2.5vw, 1.5rem);
+                        font-weight: 500;
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        background: $color-5;
+                        padding: 0.2rem 0.5rem;
+                        border-radius: 0.2rem;
+                        text-shadow: 0 1px 1px black;
+
+                        .star {
+                            color: $color-6;
+                            font-size: 1.5rem;
+                        }
+                    }
+
+                    &__overview {
+                        font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+                        color: $color-3;
+                        font-weight: 500;
+                        text-align: justify;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 3;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                        max-width: 500px;
+                        text-shadow: 0 1px 1px black;
+
+
+                        @media (max-width: 768px) {
+                            max-width: 320px;
+                        }
+                    }
+
+                    .link{
+                        text-decoration: none;
+                    }
+
+                    &__button {
+                        display: flex;
+                        gap: 10px;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100%;
+                        max-width: 200px;
+                        padding: 0 0.7rem;
+                        height: 40px;
+                        background-color: $color-3;
+                        color: $color-1;
+                        font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+                        font-weight: 500;
+                        border: none;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        transition: all .3s ease;
+
+                        &:hover {
+                            background-color: $color-4;
+                        }
+                    }
+                }
+
+
+
+            }
+        }
+    }
+}

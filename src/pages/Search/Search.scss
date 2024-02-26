@@ -1,0 +1,63 @@
+@import "../../styles/App.scss";
+
+.search {
+    width: 100%;
+    height: auto;
+
+        .search-title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 2rem;
+            
+
+            h3 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+                font-size: clamp(1.2rem, 5vw, 2.5rem);
+                font-weight: 500;
+                
+                span{
+                    color: $color-2;
+                    font-family: $font-2;
+                }
+
+                .eclair {
+                    max-width: 4rem;
+                    height: auto;
+                    box-shadow: none;
+                }
+            }
+
+
+        }
+    
+
+    .container-search {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        width: 100%;
+        margin: auto;
+
+        .movie {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            flex: 1 1 48%;
+            background: $color-7;
+            border-radius: 10px;
+        }
+
+        .tv {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            flex: 1 1 48%;
+            background: $color-6;
+            border-radius: 10px;
+        }
+    }
+}

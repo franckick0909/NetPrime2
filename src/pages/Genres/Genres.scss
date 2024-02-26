@@ -1,0 +1,167 @@
+@import "../../styles/App.scss";
+
+.top {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+    .buttons {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1rem;
+
+        .btn-page {
+            padding: 0.5rem 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            border: none;
+            border-radius: 5px;
+            background-color: $color-4;
+            color: $color-2;
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-decoration: none;
+            max-width: max-content;
+            transition: all .2s ease;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $color-6;
+            }
+        }
+    }
+}
+
+
+.genre {
+    display: flex;
+    gap: 0.5rem;
+
+    @media (max-width: 500px) {
+        flex-direction: column;
+    }
+
+    .genre-content {
+        flex: 1 1 10%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+        align-items: stretch;
+        padding: 1rem;
+        border-radius: 10px;
+        background-color: #5334ff77;
+        font-size: clamp(0.95rem, 2vw, 1rem);
+        font-weight: 500;
+        text-align: center;
+
+        @media (max-width: 500px) {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            background-color: $color-1;
+            color: $color-2;
+            font-size: clamp(0.9rem, 2vw, 1rem);
+            font-weight: 500;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.3s ease;
+
+            @media (max-width: 500px) {
+                padding: 0.2rem 0.7rem;
+            }
+
+            &:hover {
+                background-color: $color-4;
+                color: $color-3;
+            }
+
+            &.active {
+                background-color: $color-4;
+                color: $color-3;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .genre-result {
+        flex: 1 1 85%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+        justify-content: center;
+        column-gap: 1rem;
+        row-gap: 2rem;
+        padding: 1rem;
+
+
+        .result-content {
+            display: flex;
+            flex-direction: column;
+
+            .image{
+                position: relative;
+                border-radius: 10px;
+                transition: transform .3s ease;
+
+                &:hover {
+                    .overlay {
+                        transform: scale(1);
+                        opacity: 1;
+                    }
+                }
+            }
+
+            img {
+                max-width: 100%;
+                height: auto;
+                display: block;
+                border-radius: 10px;
+                transition: transform .3s ease;
+
+            }
+
+            .overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.3);
+                backdrop-filter: blur(5px);
+                -webkit-backdrop-filter: blur(5px);
+                border-radius: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                opacity: 0;
+                transform: scale(0);
+                z-index: 100;
+                transition: transform .3s ease, opacity .3s ease;
+            }
+
+            .title {
+
+                h2 {
+                    text-align: center;
+                    font-size: clamp(0.85rem, 2vw, 1rem);
+                    font-weight: 500;
+                    margin-top: 0.5rem;
+                    color: $color-2;
+                }
+            }
+        }
+    }
+}
