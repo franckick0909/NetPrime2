@@ -18,7 +18,7 @@ const App = () => {
       <Router>
         <Header />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/NetPrime2" element={<Home />} />
           <Route path="/detailMovie/:id" element={<DetailsMovie />} />
           <Route path="/detailTv/:id" element={<DetailsTv />} />
           <Route path="/movie" element={<Movie />} />
