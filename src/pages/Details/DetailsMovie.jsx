@@ -309,7 +309,7 @@ const DetailsMovie = () => {
         </div>
 
         <div className="buttons">
-          <Link to="/" className="link">
+          <Link to="/NetPrime2" className="link">
             Back to Home <FaArrowUpRightFromSquare />
           </Link>
           <Link to="/movie" className="link">
